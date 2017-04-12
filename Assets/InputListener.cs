@@ -2,6 +2,7 @@
 // Copyright (c) Oshyn Inc. All rights reserved.
 // For more information please visit http://www.oshyn.com/Services/holographic
 
+using System;
 using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 
@@ -37,7 +38,7 @@ public class InputListener : MonoBehaviour, IFocusable, ISourceStateHandler, IIn
         var eventName = "OnInputUp";
         Debug.Log(string.Format("{0}:Triggered {1}", gameObject.name, eventName));
     }
-    public void OnInputClicked(InputEventData eventData)
+    public void OnInputClicked(InputClickedEventData eventData)
     {
         var eventName = "OnInputClicked";
         Debug.Log(string.Format("{0}:Triggered {1}", gameObject.name, eventName));
